@@ -25,7 +25,10 @@ const Post = () => {
         <p>Lorem ipsum 👋</p>
 
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nostrum, illo mollitia magni libero repellat maiores aliquam ut commodi velit suscipit qui rerum dolorum, reiciendis fuga nam amet expedita officia? 🚀
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+          nostrum, illo mollitia magni libero repellat maiores aliquam ut
+          commodi velit suscipit qui rerum dolorum, reiciendis fuga nam amet
+          expedita officia? 🚀
         </p>
 
         <p>
@@ -33,11 +36,18 @@ const Post = () => {
         </p>
 
         <p>
-          <a href="#">#novoprojeto</a>{" "}
-          <a href="#"> #nlw </a>{" "}
+          <a href="#">#novoprojeto</a> <a href="#"> #nlw </a>{" "}
           <a href="#">#rocketseat</a>
         </p>
       </div>
+
+      <form className={styles.commentForm}>
+        <strong>Deixe seu feedback</strong>
+        <textarea placeholder="Deixe um comentário ..." />
+        <footer>
+          <button type="submit">Comentar</button>
+        </footer>
+      </form>
     </article>
   );
 };
