@@ -3,7 +3,7 @@ import React from 'react'
 import Avatar from './Avatar'
 import styles from "./Comment.module.css"
 
-const Comment = () => {
+const Comment = ({content}) => {
   return (
     <div className={styles.comment}>
         <Avatar hasBorder={false} src="https://github.com/viniscrv.png" />
@@ -20,7 +20,7 @@ const Comment = () => {
                         <Trash size={24}/>
                     </button>
                 </header>
-                <p>Muito bom Devon, parabéns!! 👏👏</p>
+                <p>{content}</p>
             </div>
             <footer>
                 <button>
