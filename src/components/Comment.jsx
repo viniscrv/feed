@@ -3,7 +3,12 @@ import React from 'react'
 import Avatar from './Avatar'
 import styles from "./Comment.module.css"
 
-const Comment = ({content}) => {
+const Comment = ({content, onDeleteComment}) => {
+
+  function handleDeleteComment() {
+    onDeleteComment(content);
+  }
+
   return (
     <div className={styles.comment}>
         <Avatar hasBorder={false} src="https://github.com/viniscrv.png" />
@@ -16,7 +21,7 @@ const Comment = ({content}) => {
                         <time title="20 de novembro às 17:36h" dateTime="2022-11-20 17:36:00">Cerca de 2h atrás</time>
                     </div>
 
-                    <button title="Deletar comentário">
+                    <button onClick={handleDeleteComment} title="Deletar comentário">
                         <Trash size={24}/>
                     </button>
                 </header>
